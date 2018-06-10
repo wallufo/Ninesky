@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Ninesky.Core.Administrator">
+    <Position X="17" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAEQAACCAAAgAAAAAAA=</HashCode>
+      <FileName>Administrator\Administrator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ninesky.Core.AdministratorManager">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAgQAAAAAAAAAAAAEIAAAAAAAAABAAIAA=</HashCode>
+      <FileName>Administrator\AdministratorManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ninesky.Core.BaseManager&lt;T&gt;" Collapsed="true">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAYAAAIAAAAAAAAAAAAAAAQAAAEIAAAAAAEACAAAAAA=</HashCode>
+      <FileName>BaseManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ninesky.Core.ContextFactory">
+    <Position X="20.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ContextFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ninesky.Core.NineskyContext">
+    <Position X="22.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAIAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NineskyContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ninesky.Core.Role">
+    <Position X="20.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Role\Role.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ninesky.Core.RoleManager">
+    <Position X="2.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Role\RoleManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ninesky.Core.User">
+    <Position X="20.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAACAABAgAEQEAAAwAAAAAAAACACAAAAAAAAA=</HashCode>
+      <FileName>User\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ninesky.Core.UserManage">
+    <Position X="9.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACIAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>User\UserManage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ninesky.Core.Category.Category">
+    <Position X="18.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAACAAAgAAAAAAAAACQAAAAAAAAgAQAAgAIAAAA=</HashCode>
+      <FileName>Category\Category.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ninesky.Core.Category.CategoryGeneral">
+    <Position X="20.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAACAAAAAAAAAAAAAAAAAAARAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Category\CategoryGeneral.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ninesky.Core.Category.CategoryGeneralManager">
+    <Position X="5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Category\CategoryGeneralManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ninesky.Core.Category.CategoryLink">
+    <Position X="22.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAICAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Category\CategoryLink.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ninesky.Core.Category.CategoryLinkManager">
+    <Position X="11.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Category\CategoryLinkManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ninesky.Core.Category.CategoryManager">
+    <Position X="14" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Category\CategoryManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ninesky.Core.Category.CategoryPage">
+    <Position X="17" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAABBAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Category\CategoryPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ninesky.Core.Category.CategoryPageManager">
+    <Position X="7.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Category\CategoryPageManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ninesky.Core.General.Security">
+    <Position X="22.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>General\Security.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ninesky.Core.Migrations.Configuration">
+    <Position X="18.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Migrations\Configuration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ninesky.Core.Types.Paging&lt;T&gt;">
+    <Position X="17" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAEAAAAAAIAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Types\Paging.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ninesky.Core.Types.Response">
+    <Position X="18.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAABAAAAAAIAAAAAA=</HashCode>
+      <FileName>Types\Response.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ninesky.DataLibrary.Convert">
+    <Position X="14" Y="7.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Ninesky.DataLibrary.EnumItemDetails">
+    <Position X="8.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Ninesky.DataLibrary.OrderParam">
+    <Position X="7" Y="7.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Ninesky.DataLibrary.Repository&lt;T&gt;">
+    <Position X="10.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Enum Name="Ninesky.Core.Category.CategoryType">
+    <Position X="22.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAACAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Category\CategoryType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ninesky.DataLibrary.OrderMethod">
+    <Position X="12.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

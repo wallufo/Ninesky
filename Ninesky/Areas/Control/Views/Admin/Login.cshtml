@@ -1,0 +1,46 @@
+﻿@model Ninesky.Areas.Control.Models.LoginViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    @Styles.Render("~/Content/controlcss")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    
+    
+    <div class="loginform">
+
+
+        <div class="form-horizontal">
+            <h2 class="text-primary">登录</h2>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group form-group-sm">
+                    @Html.EditorFor(model => model.Accounts, new { htmlAttributes = new { @class = "form-control", placeholder = "帐号" } })
+                    @Html.ValidationMessageFor(model => model.Accounts, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group form-group-sm">
+                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", placeholder = "密码" } })
+                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group form-group-sm">
+                    <input type="submit" value="登录" class="btn btn-default pull-right" />
+                </div>
+            }
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+﻿@model Ninesky.Models.Prompt
+
+@{
+    ViewBag.Title = "提示";
+}
+
+@section SideNav{@Html.Partial("SideNavPartialView")}
+
+<ol class="breadcrumb">
+    <li><span class="glyphicon glyphicon-home"></span>  @Html.ActionLink("首页", "Index", "Home")</li>
+    <li class="active"> @Html.ActionLink("用户管理", "Index", "User")</li>
+</ol>
+@Html.Partial("PromptPartialView", Model)

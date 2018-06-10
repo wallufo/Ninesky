@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content//controlcss")
+    @RenderSection("style", required: false)
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</head>
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("BlueFatMan 系统管理", "Index", "Home", new { area = "Control" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> 用户管理 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="@Url.Action("Index","User")"> 用户管理</a></li>
+                            <li><a href="@Url.Action("Index","Role")"> 角色管理</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="@Url.Action("Index","Admin")"><span class='glyphicon glyphicon-lock'></span> 管理员</a></li>
+                    <li><a><span class="glyphicon glyphicon-list"></span> 栏目设置</a></li>
+                    <li><a><span class="glyphicon glyphicon-cog"></span> 网站设置</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="@Url.Action("MyInfo","Admin")"><span class="glyphicon glyphicon-envelope"></span> @Context.Session["Accounts"].ToString()</a>
+
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Logout","Admin")"><span class="glyphicon glyphicon-log-out"></span> 退出</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-4">@RenderSection("SideNav", false)</div>
+            <div class="col-lg-9 col-md-9 col-sm-8">@RenderBody()</div>
+        </div>
+        <hr />
+        <footer class="navbar navbar-fixed-bottom text-center bg-primary ">
+            <p>&copy; Ninesky v0.1 BASE BY BlueFatMan </p>
+        </footer>
+    </div>
+</body>
+</html>

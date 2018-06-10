@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewBag.Title = "角色管理";
+}
+
+@section SideNav{@Html.Partial("SideNavPartialView")}
+
+<ol class="breadcrumb">
+    <li><span class="glyphicon glyphicon-home"></span>  @Html.ActionLink("首页", "Index", "Home")</li>
+    <li>@Html.ActionLink("用户管理", "Index", "User")</li>
+    <li class="active">@Html.ActionLink("角色管理", "Index", "Role")</li>
+</ol>
+
+<table id="admingrid"></table>
+@section style{
+    @Styles.Render("~/Content/bootstrapplugincss")
+}
+
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/bootstrapplugin")
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //表格
+            var $table = $('#admingrid');
+            $table.bootstrapTable({
+                showRefresh: true,
+                showColumns: true,
+                showFooter: true,
+                method: "post",
+                url: "@Url.Action("ListJson")",
+                columns: [
+                    { title: "ID", field: "RoleID" },
+                    { title: "名称", field: "Name", formatter: function (value, row, index) { return "<a href='@Url.Action("Modify", "Role")/" + row.RoleID + "'>" + value + "</a>" } },
+                    { title: "说明", field: "Description" },
+                    { title: "操作", field: "RoleID", formatter: function (value) { return "<a class='btn btn-sm btn-danger' data-operation='deleterole' data-value='" + value + "'>删除</a>" } }
+                ],
+                onLoadSuccess: function () {
+                    //删除按钮
+                    $("a[data-operation='deleterole']").click(function () {
+                        var id = $(this).attr("data-value");
+                        BootstrapDialog.confirm("你确定要删除" + $(this).parent().parent().find("td").eq(1).text() + "吗？", function (result) {
+                            if (result) {
+                                $.post("@Url.Action("DeleteJson", "Role")", { id: id }, function (data) {
+                                    if (data.Code == 1) {
+                                        BootstrapDialog.show({
+                                            message: "删除角色成功",
+                                            buttons: [{
+                                                icon: "glyphicon glyphicon-ok",
+                                                label: "确定",
+                                                action: function (dialogItself) {
+                                                    $table.bootstrapTable("refresh");
+                                                    dialogItself.close();
+                                                }
+                                            }]
+
+                                        });
+                                    }
+                                    else BootstrapDialog.alert(data.Message);
+                                }, "json");
+                            }
+                        });
+                    });
+                    //删除按钮结束
+                }
+            });
+            //表格结束
+        });
+    </script>
+}

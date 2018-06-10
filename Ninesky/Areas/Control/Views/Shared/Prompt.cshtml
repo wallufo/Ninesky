@@ -1,0 +1,29 @@
+﻿@model Ninesky.Models.Prompt
+
+@{
+    ViewBag.Title = Model.Title;
+}
+
+@section SideNav{@Html.Partial("SideNavPartialView")}
+
+<ol class="breadcrumb">
+    <li><span class="glyphicon glyphicon-home"></span>  @Html.ActionLink("首页", "Index", "Home")</li>
+    <li class="active">@Model.Title</li>
+</ol>
+
+<div class="panel panel-default">
+    <div class="panel-heading"><div class="panel-title">@Model.Title</div></div>
+    <div class="panel-body">
+        <p>@Html.Raw(Model.Message)</p>
+        @if (Model.Buttons != null && Model.Buttons.Count > 0)
+        {
+            <p>
+                @foreach (var item in Model.Buttons)
+                {
+                    @Html.Raw(item + "&nbsp;&nbsp;")
+
+                }
+            </p>
+        }
+    </div>
+</div>
